@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 set -e
 
 # Make sure service is running
@@ -11,4 +11,4 @@ touch /var/log/haproxy.log
 tail -f /var/log/haproxy.log &
 
 # Start haproxy
-exec haproxy -f /usr/local/etc/haproxy/haproxy.cfg
+haproxy -f /usr/local/etc/haproxy/haproxy.cfg
