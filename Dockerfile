@@ -12,5 +12,6 @@ COPY docker-entrypoint.sh /
 COPY haproxy.cfg /usr/local/etc/haproxy/haproxy.cfg
 
 EXPOSE 29418
+EXPOSE 389
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
