@@ -7,6 +7,5 @@ RUN apt-get update && apt-get install rsyslog -y --no-install-recommends && \
 
 COPY haproxy.conf /etc/rsyslog.d
 COPY docker-entrypoint.sh /
-COPY haproxy.cfg /usr/local/etc/haproxy/haproxy.cfg
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
