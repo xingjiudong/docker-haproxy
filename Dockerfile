@@ -1,6 +1,4 @@
-FROM haproxy:1.7
-
-MAINTAINER xingjiudong <25635680@qq.com>
+FROM haproxy:2.1.4
 
 RUN apt-get update && apt-get install rsyslog -y --no-install-recommends && \
     rm -rf /var/lib/apt/lists/* && \
@@ -10,7 +8,5 @@ RUN apt-get update && apt-get install rsyslog -y --no-install-recommends && \
 COPY haproxy.conf /etc/rsyslog.d
 COPY docker-entrypoint.sh /
 COPY haproxy.cfg /usr/local/etc/haproxy/haproxy.cfg
-
-EXPOSE 27017
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
